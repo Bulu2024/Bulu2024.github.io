@@ -14,28 +14,27 @@
       font-family: 'Poppins', sans-serif;
       overflow: hidden;
     }
-.watermark {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  width: 50%;
-  height: 50%;                     /* ← was auto */
-  transform: translate(-50%, -50%);
-  background: url('logo.png')      /* your watermark */
-              center center no-repeat;
-  background-size: contain;        /* scale to fit */
-  opacity: 0.5;
-  pointer-events: none;
-}
+    .watermark {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 50%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+      background: url('logo.png') center center no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      pointer-events: none;
+    }
     .content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      width: 100%;
       padding: 0 20px;
+      z-index: 1;
     }
     .content h1 {
       font-weight: 300;
