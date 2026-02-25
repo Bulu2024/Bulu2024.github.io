@@ -34,7 +34,17 @@
       border-bottom: 1px solid var(--border);
       padding: 1.2rem 0;
     }
-    .navbar-brand { font-weight: 800; color: var(--primary) !important; letter-spacing: -0.5px; }
+    .navbar-brand { 
+      font-weight: 800; 
+      color: var(--primary) !important; 
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+    }
+    .brand-logo {
+      height: 32px; /* Adjusted height for the logo */
+      margin-right: 12px;
+    }
     .nav-link { color: var(--text-muted) !important; font-weight: 500; }
     .nav-link:hover { color: var(--primary) !important; }
 
@@ -118,7 +128,10 @@
 
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">LonalytIQ</a>
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="LonalytIQ Logo" class="brand-logo">
+        LonalytIQ
+      </a>
       <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link px-3" href="#challenge">Challenge</a></li>
@@ -134,7 +147,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1200">
-          <span class="section-label">Intelligence Analytics</span>
+          <span class="section-label">Infrastructure-Grade DPI</span>
           <h1>Unmask the <span class="highlight">Invisible</span> in Every Byte</h1>
           <p class="lead mb-5" style="color: var(--text-muted); font-size: 1.3rem; max-width: 650px;">
             Transforming massive telecommunications data into actionable intelligence. From nationwide networks to individual digital footprints.
