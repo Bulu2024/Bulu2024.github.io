@@ -3,113 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LonalytIQ | Network Intelligence Platform</title>
+  <title>LonalytIQ | Deep Packet Intelligence</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <style>
     :root {
-      --primary: #00bcd4;
-      --bg-dark: #05080a;
-      --card-bg: rgba(255, 255, 255, 0.03);
-      --border-color: rgba(255, 255, 255, 0.1);
+      --primary: #00f2ff; /* Vibrant Cyan for high visibility */
+      --primary-dim: rgba(0, 242, 255, 0.15);
+      --bg-black: #030507;
+      --bg-card: #0c121a;
+      --text-main: #ffffff;
+      --text-muted: #cbd5e0; /* Brighter gray for better readability */
+      --border: rgba(255, 255, 255, 0.12);
     }
 
     body { 
-      font-family: 'Inter', sans-serif; 
-      background-color: var(--bg-dark); 
-      color: #ffffff; 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background-color: var(--bg-black); 
+      color: var(--text-main); 
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Modern Glassmorphism Navbar */
+    /* Glass Navbar */
     .navbar { 
-      background: rgba(5, 8, 10, 0.8);
-      backdrop-filter: blur(15px); 
-      border-bottom: 1px solid var(--border-color);
-      padding: 20px 0;
+      background: rgba(3, 5, 7, 0.9);
+      backdrop-filter: blur(20px); 
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
     }
-    .navbar-brand { font-weight: 800; color: var(--primary) !important; letter-spacing: -1px; }
+    .navbar-brand { font-weight: 800; color: var(--primary) !important; letter-spacing: -0.5px; }
+    .nav-link { color: var(--text-muted) !important; font-weight: 500; }
+    .nav-link:hover { color: var(--primary) !important; }
 
-    /* Hero Section with Moving Gradient */
+    /* Hero */
     .hero-section { 
       min-height: 100vh; 
       display: flex; 
       align-items: center; 
-      background: radial-gradient(circle at 50% 50%, #112240 0%, #05080a 100%);
+      background: radial-gradient(circle at top right, #0a192f 0%, #030507 60%);
+      padding-top: 80px;
     }
 
-    h1 { font-weight: 800; font-size: clamp(3rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 30px; }
-    h2 { font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; margin-bottom: 20px; }
+    h1 { font-weight: 800; font-size: clamp(2.5rem, 7vw, 4.5rem); letter-spacing: -2px; margin-bottom: 1.5rem; }
+    .highlight { color: var(--primary); text-shadow: 0 0 30px rgba(0, 242, 255, 0.3); }
 
-    /* Modernized Cards */
+    /* Modernized Cards with Better Contrast */
     .feature-card { 
-      background: var(--card-bg); 
-      padding: 40px;
-      border-radius: 24px; 
-      border: 1px solid var(--border-color); 
+      background: var(--bg-card); 
+      padding: 2.5rem;
+      border-radius: 20px; 
+      border: 1px solid var(--border); 
       height: 100%; 
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
     }
     .feature-card:hover { 
-      transform: translateY(-10px);
       border-color: var(--primary);
-      box-shadow: 0 20px 40px rgba(0, 188, 212, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
+    .feature-card h4 { font-weight: 700; margin-bottom: 1rem; color: #fff; }
+    .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* Glow Elements */
-    .glow-text {
-      text-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
-    }
-
+    /* Buttons */
     .btn-primary { 
       background: var(--primary); 
+      color: #000;
       border: none; 
-      padding: 15px 40px; 
-      font-weight: 600; 
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+      padding: 14px 32px; 
+      font-weight: 700; 
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    .btn-primary:hover { 
+      background: #fff; 
+      color: #000;
+      transform: scale(1.05);
+    }
+    .btn-outline-light { border-radius: 10px; padding: 14px 32px; border: 1px solid var(--border); }
+
+    section { padding: 100px 0; }
+    
+    /* Section Headings */
+    .section-label { 
+      color: var(--primary); 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      letter-spacing: 3px; 
+      font-size: 0.85rem; 
+      display: block;
+      margin-bottom: 1rem;
     }
 
-    section { padding: 120px 0; }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: var(--bg-dark); }
-    ::-webkit-scrollbar-thumb { background: #1a202c; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg-black); }
+    ::-webkit-scrollbar-thumb { background: #1a2433; border-radius: 5px; }
   </style>
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand fs-3" href="#">LONALYTIQ</a>
+      <a class="navbar-brand" href="#">LONALYTIQ</a>
       <div class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link px-3" href="#challenge">The Challenge</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#advantage">Our Advantage</a></li>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link px-3" href="#challenge">Challenge</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#advantage">Advantage</a></li>
           <li class="nav-item"><a class="nav-link px-3" href="#capabilities">Ecosystem</a></li>
-          <li class="nav-item"><a class="btn btn-primary ms-3" href="mailto:demo@lonalytiq.com">Request Demo</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-4" href="mailto:demo@lonalytiq.com">Request Demo</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <section id="hero" class="hero-section">
-    <div class="container text-center">
-      <div data-aos="fade-up" data-aos-duration="1000">
-        <h2 class="mb-4">Intelligence Evolution</h2>
-        <h1 class="glow-text">See the <span style="color:var(--primary)">Unseen</span></h1>
-        <p class="lead mb-5 mx-auto" style="max-width: 700px; color: #a0aec0; font-size: 1.25rem;">
-          From nationwide network monitoring to the individual digital footprint. Infrastructure-grade DPI transforming mass data into strategic intelligence[cite: 19, 20].
-        </p>
-        <div class="d-flex justify-content-center gap-3">
-          <a href="#advantage" class="btn btn-outline-light btn-lg px-5" style="border-radius: 12px;">Discover How</a>
-          <a href="mailto:demo@lonalytiq.com" class="btn btn-primary btn-lg px-5">Request Demo</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1200">
+          <span class="section-label">Infrastructure-Grade DPI</span>
+          <h1>Unmask the <span class="highlight">Invisible</span> in Every Byte</h1>
+          <p class="lead mb-5" style="color: var(--text-muted); font-size: 1.3rem; max-width: 650px;">
+            Transforming massive telecommunications data into actionable intelligence. From nationwide networks to individual digital footprints.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#advantage" class="btn btn-primary">Discover Platform</a>
+            <a href="#capabilities" class="btn btn-outline-light text-white">View Ecosystem</a>
+          </div>
         </div>
       </div>
     </div>
@@ -118,45 +141,45 @@
   <section id="challenge">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <h2>The Intelligence Gap</h2>
-          <h3 class="display-5 fw-bold mb-4">Drowning in Data, Starving for Insight.</h3>
-          <p class="text-muted mb-4">Traditional intelligence systems are failing. Networks generate billions of records daily, overwhelming standard analysis tools[cite: 22].</p>
-          <p class="text-muted">LonalytIQ bridges the gap where legacy systems go blind—detecting encrypted VoIP, VPNs, and hidden patterns[cite: 22].</p>
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-label">The Problem</span>
+          <h2 class="display-5 fw-bold mb-4">The Intelligence Gap</h2>
+          <p class="mb-4" style="color: var(--text-muted);">Traditional intelligence systems are drowning. Networks generate billions of records daily, overwhelming standard analysis tools while encrypted VoIP and VPNs leave legacy systems blind.</p>
+          <p class="mb-5" style="color: var(--text-muted);">LonalytIQ provides the bridge, capturing data where others see only noise.</p>
         </div>
-        <div class="col-md-5 offset-md-1" data-aos="fade-left">
-          <div class="feature-card">
-            <h4 class="text-danger mb-3">The Bottleneck</h4>
-            <p>OSINT and AdInt rely on voluntary or commercial data. Standard systems miss the passive, background "Pattern of Life"[cite: 23].</p>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="feature-card" data-aos="zoom-in" style="border-left: 4px solid #ff4d4d;">
+            <h4 style="color: #ff4d4d;">The Bottleneck</h4>
+            <p>OSINT and AdInt are limited by voluntary posts or commercial ads. LonalytIQ captures the passive, background "Pattern of Life" that standard systems miss.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="advantage" style="background: #080c14;">
-    <div class="container text-center mb-5">
-      <h2 data-aos="fade-up">Why LonalytIQ?</h2>
-      <h3 class="display-6 fw-bold" data-aos="fade-up" data-aos-delay="100">The Ground Truth Advantage</h3>
-    </div>
+  <section id="advantage" style="background: #060a0f;">
     <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Edge</span>
+        <h2 class="display-6 fw-bold">The Ground Truth Advantage</h2>
+      </div>
       <div class="row g-4">
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-card">
-            <h4 class="mb-3">The "Ground Truth"</h4>
-            <p class="text-muted small">Direct carrier core connection (Layers 1-7). Unlike OSINT or AdInt, our data is unavoidable and continuous[cite: 24, 25, 26].</p>
+            <h4>The "Ground Truth"</h4>
+            <p>Direct carrier core connection at Layers 1-7. Unlike OSINT, our data is unavoidable. If a device connects, it is tracked.</p>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <h4>See the "Unseen"</h4>
           <div class="feature-card">
-            <h4 class="mb-3">See the "Unseen"</h4>
-            <p class="text-muted small">AI Traffic Fingerprinting classifies behavior—identifying VoIP, Crypto, and VPNs without needing to decrypt content[cite: 27].</p>
+            <p>AI Traffic Fingerprinting classifies behavior—identifying VoIP, Crypto, and VPNs without needing to decrypt the content.</p>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-card">
-            <h4 class="mb-3">Macro to Micro</h4>
-            <p class="text-muted small">Process billions of nationwide records, then instantly drill down to a single subscriber’s precise timeline[cite: 28].</p>
+            <h4>Macro to Micro</h4>
+            <p>Process billions of nationwide records to detect mass movement, then instantly drill down to a single subscriber’s precise timeline.</p>
           </div>
         </div>
       </div>
@@ -166,79 +189,79 @@
   <section id="capabilities">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <h2>Intelligence Ecosystem</h2>
-        <h3 class="display-6 fw-bold">8 Pillars of Dominance</h3>
+        <span class="section-label">Capabilities</span>
+        <h2 class="display-6 fw-bold">8 Pillars of Intelligence</h2>
       </div>
       
       <div class="row g-4">
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">War Room Command & Control</h4>
-            <p class="text-muted small">Strategic overview and crucial KPIs for high-level decision-making. Unified pane of glass for multi-agency efforts[cite: 31].</p>
+            <h4 style="color: var(--primary);">War Room</h4>
+            <p>Strategic C&C overview for high-level decision making and multi-agency coordination.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Network Macro View</h4>
-            <p class="text-muted small">Tracks application trends, VPN/Crypto volume, and deep insights into Roamer visitors and stay duration[cite: 32].</p>
+            <h4 style="color: var(--primary);">Macro View</h4>
+            <p>Total visibility into network trends, VPN volume, and Roamer visitor insights.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Geospatial Intelligence</h4>
-            <p class="text-muted small">GPS-independent live tracking, movement history, and dynamic heatmaps to visualize presence[cite: 34].</p>
+            <h4 style="color: var(--primary);">Geospatial</h4>
+            <p>GPS-independent tracking with movement history and dynamic heatmaps.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Subscriber Digital Footprints</h4>
-            <p class="text-muted small">360° cyber footprint connecting web browsing, social media, and location into one map[cite: 35, 36].</p>
+            <h4>Footprints</h4>
+            <p>A 360° digital profile connecting web, social, and location data instantly.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Targets Tracking</h4>
-            <p class="text-muted small">Targets Bank with multi-tenancy and proactive geofence alerts for real-time notifications[cite: 38].</p>
+            <h4>Tracking</h4>
+            <p>Persistent watch lists with geofencing alerts and multi-tenancy support.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">De-Anonymization Engine</h4>
-            <p class="text-muted small">Links virtual identities to MSISDNs, unmasking social media users and Telegram admins[cite: 40].</p>
+            <h4>De-Anon</h4>
+            <p>Unmasking the real people behind social media and Telegram accounts.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">AI & Machine Learning Core</h4>
-            <p class="text-muted small">Pattern matching, Smart Tags, and Natural Language Chat to translate metadata into answers[cite: 42].</p>
+            <h4>AI Core</h4>
+            <p>Pattern matching and Natural Language Chat to query billions of records.</p>
           </div>
         </div>
-        <div class="col-md-6" data-aos="zoom-in-up">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Real-Time Field Operations</h4>
-            <p class="text-muted small">Secure Android app pushing locations to agents and providing "Team Awareness" for coordination[cite: 44, 45].</p>
+            <h4>Field Ops</h4>
+            <p>Secure mobile app pushing target locations to ground agents in real-time.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="text-center py-5 border-top border-secondary mt-5">
+  <footer class="text-center py-5 border-top border-secondary" style="background: #030507;">
     <div class="container" data-aos="fade-up">
-      <h3 class="fw-light mb-4">Ready to uncover the Ground Truth?</h3>
-      <a href="mailto:demo@lonalytiq.com" class="btn btn-primary btn-lg">Contact Us: demo@lonalytiq.com</a>
-      <p class="mt-5 text-muted small">&copy; 2026 LonalytIQ. All rights reserved[cite: 46, 47].</p>
+      <h2 class="mb-4">Ready to see the Ground Truth?</h2>
+      <a href="mailto:demo@lonalytiq.com" class="btn btn-primary btn-lg px-5">Contact Us: demo@lonalytiq.com</a>
+      <p class="mt-5 text-muted small">&copy; 2026 LonalytIQ. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Initialize Animations
     AOS.init({
-      duration: 800,
-      once: false, // Animates back when scrolling up
-      mirror: true
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 50
     });
   </script>
 </body>
