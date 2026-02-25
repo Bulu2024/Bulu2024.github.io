@@ -1,65 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LonalytIQ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LonalytIQ | Network Intelligence Platform</title>
+  <!-- Load Modern Fonts & Bootstrap 5 Framework -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: #111;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      overflow: hidden;
-    }
-    .watermark {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      width: 50%;
-      height: 50%;
-      transform: translate(-50%, -50%);
-      background: url('logo.png') center center no-repeat;
-      background-size: contain;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-    .content {
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: 100%;
-      padding: 0 20px;
-      z-index: 1;
-    }
-    .content h1 {
-      font-weight: 300;
-      font-size: 2.5rem;
-    }
-    .content a {
-      color: #00bcd4;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .content a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      .content h1 { font-size: 1.8rem; }
-    }
+    body { font-family: 'Poppins', sans-serif; background-color: #0a0f18; color: #ffffff; }
+    /* Navigation */
+    .navbar { background-color: rgba(10, 15, 24, 0.95); backdrop-filter: blur(10px); }
+    .navbar-brand { font-weight: 700; color: #00bcd4 !important; font-size: 1.5rem; }
+    .nav-link { color: #e0e0e0 !important; font-weight: 400; transition: 0.3s; }
+    .nav-link:hover { color: #00bcd4 !important; }
+    
+    /* Sections */
+    section { padding: 100px 0; border-bottom: 1px solid #1f2937; }
+    .hero-section { height: 100vh; display: flex; align-items: center; text-align: center; background: radial-gradient(circle at center, #111a2e 0%, #0a0f18 100%); border-bottom: none; }
+    
+    /* Typography & Elements */
+    h1 { font-weight: 700; font-size: 3.5rem; margin-bottom: 20px; }
+    h2 { font-weight: 600; font-size: 2.5rem; color: #00bcd4; margin-bottom: 40px; text-align: center; }
+    h4 { font-weight: 600; color: #ffffff; }
+    p { color: #a0aec0; line-height: 1.7; font-weight: 300; }
+    
+    /* Cards */
+    .feature-card { background: #111827; padding: 30px; border-radius: 12px; border: 1px solid #1f2937; height: 100%; transition: transform 0.3s; }
+    .feature-card:hover { transform: translateY(-5px); border-color: #00bcd4; }
+    
+    /* Buttons */
+    .btn-primary { background-color: #00bcd4; border: none; padding: 12px 30px; font-weight: 600; border-radius: 30px; transition: 0.3s; }
+    .btn-primary:hover { background-color: #0097a7; box-shadow: 0 0 15px rgba(0, 188, 212, 0.4); }
   </style>
 </head>
-<body>
-  <div class="watermark"></div>
-  <div class="content">
-    <h3>
-      Request a demo: 
-      <a href="mailto:demo@lonalytiq.com">demo@lonalytiq.com</a>
-    </h3>
-  </div>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">LonalytIQ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#challenge">The Challenge</a></li>
+          <li class="nav-item"><a class="nav-link" href="#advantage">Our Advantage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-3" href="mailto:demo@lonalytiq.com">Request Demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <h1>See the Unseen</h1>
+      <p class="lead mb-5" style="font-size: 1.5rem; color: #e0e0e0;">From Nationwide Network to the Individual Digital Footprint.</p>
+      <p class="mb-5" style="max-width: 800px; margin: 0 auto;">An infrastructure-grade Deep Packet Inspection (DPI) platform transforming massive telecommunications data into strategic, actionable intelligence.</p>
+      <a href="#advantage" class="btn btn-outline-light me-3" style="border-radius: 30px; padding: 12px 30px;">Discover How</a>
+      <a href="mailto:demo@lonalytiq.com" class="btn btn-primary">Request a Demo</a>
+    </div>
+  </section>
+
+  <!-- The Challenge Section -->
+  <section id="challenge">
+    <div class="container">
+      <h2>The Intelligence Gap</h2>
+      <div class="row align-items-center mt-5">
+        <div class="col-md-6">
+          <p class="lead" style="color:#fff;">Drowning in Data, Starving for Insight.</p>
+          <p>Traditional intelligence systems are failing. Networks generate billions of records daily across millions of subscribers, overwhelming standard analysis tools.</p>
+          <p>Furthermore, legacy interception systems go blind when targets use encrypted VoIP apps like WhatsApp and Telegram, or hide behind VPNs. LonalytIQ bridges this gap.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-card text-center">
+            <h4 style="color: #f87171;">The Bottleneck</h4>
+            <p>OSINT relies on voluntary public posts. AdInt relies on commercial apps loading ads. Standard systems miss the passive, background "Pattern of Life."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Advantage Section -->
+  <section id="advantage" style="background-color: #0d131f;">
+    <div class="container">
+      <h2>The LonalytIQ Advantage</h2>
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <h4>The "Ground Truth"</h4>
+            <p>We connect directly to the carrier core (Layers 1-7). Unlike OSINT (which can be faked) or AdInt (which can be blocked), our data is unavoidable. If a device connects, it is tracked continuously.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <h4>See the "Unseen"</h4>
+            <p>Overcome encryption without decrypting content. Our AI Traffic Fingerprinting classifies behavior, instantly identifying VoIP calls, Crypto usage, and VPNs that legacy tools miss.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <h4>Macro to Micro</h4>
+            <p>Process billions of nationwide records to detect mass movement and emerging threats (Macro), then instantly drill down to a single subscriber’s precise timeline and location (Micro).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities Section -->
+  <section id="capabilities">
+    <div class="container">
+      <h2>A Complete Intelligence Ecosystem</h2>
+      <div class="row mt-5">
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h4>AI Intelligence Chat</h4>
+            <p>A natural language engine that learns your network. Ask complex questions in plain English (e.g., "Show me WhatsApp usage near the stadium") and receive instant charts, maps, and insights without needing SQL skills.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h4>De-Anonymization Engine</h4>
+            <p>Unmask the real identity behind anonymous social media accounts. By correlating the exact timestamp of a Facebook Live stream or YouTube upload with network traffic, we reveal the specific physical Phone Number (MSISDN).</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h4>Mobile Proximity Finder</h4>
+            <p>Discover hidden relationships that communication logs miss. Our ML engine analyzes physical movement to identify co-travelers, hidden groups, and 2nd "burner" phones carried by the same person.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h4>Real-Time Field Operations</h4>
+            <p>Empower your National Security and Police agents with a dedicated mobile app. Push real-time location targets and alerts directly to units on the ground via a privately secured tunnel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 50px 0; text-align: center; border-top: 1px solid #1f2937;">
+    <div class="container">
+      <h3 style="font-weight: 300;">Ready to uncover the Ground Truth?</h3>
+      <a href="mailto:demo@lonalytiq.com" class="btn btn-primary mt-3 btn-lg">Contact Us: demo@lonalytiq.com</a>
+      <p class="mt-5 text-muted small">&copy; 2024 LonalytIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Required for mobile menu) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
