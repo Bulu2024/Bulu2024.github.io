@@ -11,12 +11,12 @@
   
   <style>
     :root {
-      --primary: #00f2ff; /* Vibrant Cyan for high visibility */
-      --primary-dim: rgba(0, 242, 255, 0.15);
+      --primary: #50a2e4; /* Your custom blue */
+      --primary-dim: rgba(80, 162, 228, 0.15);
       --bg-black: #030507;
       --bg-card: #0c121a;
       --text-main: #ffffff;
-      --text-muted: #cbd5e0; /* Brighter gray for better readability */
+      --text-muted: #cbd5e0; 
       --border: rgba(255, 255, 255, 0.12);
     }
 
@@ -49,9 +49,9 @@
     }
 
     h1 { font-weight: 800; font-size: clamp(2.5rem, 7vw, 4.5rem); letter-spacing: -2px; margin-bottom: 1.5rem; }
-    .highlight { color: var(--primary); text-shadow: 0 0 30px rgba(0, 242, 255, 0.3); }
+    .highlight { color: var(--primary); text-shadow: 0 0 30px rgba(80, 162, 228, 0.3); }
 
-    /* Modernized Cards with Better Contrast */
+    /* Modernized Cards */
     .feature-card { 
       background: var(--bg-card); 
       padding: 2.5rem;
@@ -87,7 +87,6 @@
 
     section { padding: 100px 0; }
     
-    /* Section Headings */
     .section-label { 
       color: var(--primary); 
       font-weight: 700; 
@@ -98,7 +97,6 @@
       margin-bottom: 1rem;
     }
 
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: var(--bg-black); }
     ::-webkit-scrollbar-thumb { background: #1a2433; border-radius: 5px; }
@@ -148,8 +146,8 @@
           <p class="mb-5" style="color: var(--text-muted);">LonalytIQ provides the bridge, capturing data where others see only noise.</p>
         </div>
         <div class="col-lg-5 offset-lg-1">
-          <div class="feature-card" data-aos="zoom-in" style="border-left: 4px solid #ff4d4d;">
-            <h4 style="color: #ff4d4d;">The Bottleneck</h4>
+          <div class="feature-card" data-aos="zoom-in" style="border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary);">The Bottleneck</h4>
             <p>OSINT and AdInt are limited by voluntary posts or commercial ads. LonalytIQ captures the passive, background "Pattern of Life" that standard systems miss.</p>
           </div>
         </div>
@@ -171,8 +169,8 @@
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <h4>See the "Unseen"</h4>
           <div class="feature-card">
+            <h4>See the "Unseen"</h4>
             <p>AI Traffic Fingerprinting classifies behavior—identifying VoIP, Crypto, and VPNs without needing to decrypt the content.</p>
           </div>
         </div>
@@ -189,57 +187,57 @@
   <section id="capabilities">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <span class="section-label">Capabilities</span>
-        <h2 class="display-6 fw-bold">8 Pillars of Intelligence</h2>
+        <span class="section-label">Our Solution</span>
+        <h2 class="display-6 fw-bold">Complete Intelligence Ecosystem</h2>
       </div>
       
       <div class="row g-4">
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">War Room</h4>
-            <p>Strategic C&C overview for high-level decision making and multi-agency coordination.</p>
+            <h4 style="color: var(--primary);">War Room Command & Control</h4>
+            <p>Built for central deployment, this module provides a strategic overview and crucial KPIs for high-level decision-making. It allows commanders to monitor nationwide trends and coordinate multi-agency intelligence efforts from a single, unified pane of glass.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Macro View</h4>
-            <p>Total visibility into network trends, VPN volume, and Roamer visitor insights.</p>
+            <h4 style="color: var(--primary);">Network Macro View</h4>
+            <p>Gain total visibility into the entire network's activity. This macro-level dashboard tracks broad application trends, detects the volume of VPNs and anonymizers, monitors Crypto application usage, and provides deep insights into Roamer visitors (including country of origin, dual-SIM matching, and stay duration).</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4 style="color: var(--primary);">Geospatial</h4>
-            <p>GPS-independent tracking with movement history and dynamic heatmaps.</p>
+            <h4 style="color: var(--primary);">Geospatial Intelligence</h4>
+            <p>Network-based location monitoring that works independently of device GPS. This module provides live tracking of active targets, detailed movement history, and dynamic heatmaps to visualize target patterns and presence across different sectors over time.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4>Footprints</h4>
-            <p>A 360° digital profile connecting web, social, and location data instantly.</p>
+            <h4 style="color: var(--primary);">Subscriber Digital Footprints</h4>
+            <p>Consolidate every trace a target leaves on the network into a complete 360° cyber footprint. The system automatically builds an instant profile connecting their web browsing, social media activities, instant messaging, and location data into one comprehensive intelligence map.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4>Tracking</h4>
-            <p>Persistent watch lists with geofencing alerts and multi-tenancy support.</p>
+            <h4 style="color: var(--primary);">Targets Tracking</h4>
+            <p>Transform persons of interest into high-fidelity intelligence assets using the Targets Bank. Maintain a persistent, real-time watch list with separated target groups (Multi-Tenancy) and set proactive geofence alerts to be notified the moment a suspect enters or exits a defined zone.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4>De-Anon</h4>
-            <p>Unmasking the real people behind social media and Telegram accounts.</p>
+            <h4 style="color: var(--primary);">De-Anonymization Engine</h4>
+            <p>Bridge the gap between virtual and physical identities. This advanced correlation engine links anonymous online activities to physical phone numbers (MSISDN), successfully unmasking the real people behind social media accounts (Facebook, YouTube, TikTok, Twitter) and hidden Telegram Channel Admins.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4>AI Core</h4>
-            <p>Pattern matching and Natural Language Chat to query billions of records.</p>
+            <h4 style="color: var(--primary);">AI & Machine Learning Core</h4>
+            <p>Powered by an advanced intelligence engine that does more than just answer questions. The machine learning engine performs complex pattern matching, automatically generates "Smart Tags" for targets (e.g., labeling a number as a 'Heavy Crypto User' or 'Social Media Activist'), writes AI-generated behavioral summaries, and features a Natural Language Chat that instantly translates billions of raw metadata records into clear visual answers.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-lg-6" data-aos="fade-up">
           <div class="feature-card">
-            <h4>Field Ops</h4>
-            <p>Secure mobile app pushing target locations to ground agents in real-time.</p>
+            <h4 style="color: var(--primary);">Real-Time Field Operations</h4>
+            <p>Take intelligence out of the office and into the streets. A dedicated, secure mobile application (Android) pushes real-time target locations and proactive alerts directly to agents on the ground. It also features "Team Awareness" tools, allowing supervisors to see the live locations of their own field units to coordinate safe, tactical interceptions.</p>
           </div>
         </div>
       </div>
